@@ -1,0 +1,31 @@
+{
+  "name": "pancho-ui",
+  "version": "1.0.0",
+  "description": "Basic Server App",
+  "main": "server.js",
+  "dependencies": {
+    "bunyan": "^1.5.1",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Federico Piagentini",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fpiagent/porter-ui.git"
+  },
+  "keywords": [
+    "porter",
+    "ui",
+    "angular",
+    "flash"
+  ],
+  "bugs": {
+    "url": "https://github.com/fpiagent/porter-ui/issues"
+  },
+  "homepage": "https://github.com/fpiagent/porter-ui#readme"
+}
