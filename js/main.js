@@ -52,20 +52,20 @@ function createPentagon() {
 
 function locateVideos() {
 
-	$('#vid1').css({ top: '155px' });
-	$('#vid1').css({ left: '674px' });
-	
-	$('#vid2').css({ top: '280px' });
-	$('#vid2').css({ right: '406px' });
-	
-	$('#vid3').css({ top: '280px' });
-	$('#vid3').css({ left: '430px' });
-	
-	$('#vid4').css({ top: '400px' });
-	$('#vid4').css({ left: '581px' });
-	
-	$('#vid5').css({ top: '400px' });
-	$('#vid5').css({ right: '549px' });
+//	$('#vid1').css({ top: '155px' });
+//	$('#vid1').css({ left: '674px' });
+//	
+//	$('#vid2').css({ top: '280px' });
+//	$('#vid2').css({ right: '406px' });
+//	
+//	$('#vid3').css({ top: '280px' });
+//	$('#vid3').css({ left: '430px' });
+//	
+//	$('#vid4').css({ top: '400px' });
+//	$('#vid4').css({ left: '581px' });
+//	
+//	$('#vid5').css({ top: '400px' });
+//	$('#vid5').css({ right: '549px' });
 }
 
 
@@ -79,9 +79,8 @@ app.controller('PageCtrl', function($scope, $http) {
 app.controller('MainCtrl', function($scope, $http) {
 	console.log("Main Controller reporting for duty.");
 	
-	$('body').css('background-color', 'white');
 	window.scrollTo(0,0);
 	
-	createPentagon();
-	locateVideos();
+//	createPentagon();
+//	locateVideos();
 });

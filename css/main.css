@@ -33,7 +33,7 @@ body {
 
 /* Page Sections */
 .section, .section-colored {
-	padding: 50px 0;
+	/*padding: 50px 0;*/
 }
 
 .section-colored {
@@ -165,29 +165,50 @@ h1 {
 	color: white;
 }
 
-h1.main {
-	font-family: "Magic Pancho";
-	font-size: 28pt;
-	letter-spacing: 0.5pt;
-	color: black;
-}
-
 #pentagon {
-	/*border: 1px solid #FFFFFF;*/
-	min-height: 300px;
+	min-height: 620px;
 	animation: beat 5s infinite alternate;
 	transform-origin: center;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url("../images/pentagono.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative
 }
 
 .vid {
-	height: 50px;
 	position: absolute;
-	animation: beat 5s infinite alternate;
-	transform-origin: center;
+}
+
+#vid1 {
+	top: 0;
+	right: auto;
+	left: auto;
+}
+
+#vid2 {
+	top: 130pt;
+	right: 50pt;
+}
+
+#vid3 {
+	bottom: 0px;
+	right: 100pt;
+}
+
+#vid4 {
+	bottom: 0px;
+	left: 100pt;
+}
+
+#vid5 {
+	top: 130pt;
+	left: 50pt;
 }
 
 .vid img {
-	height: 100%;
+	width: 50%;
 }
 
 .main-title {
@@ -195,7 +216,7 @@ h1.main {
 }
 
 @keyframes beat{
-	to { transform: scale(1.4); }
+	to { transform: scale(0.9); }
 }
 
 @font-face {
