@@ -46,11 +46,12 @@ function createPentagon() {
 	
 	//Coloring
 	c2.lineWidth = 2;
-	c2.strokeStyle = '#FFF';
+	c2.strokeStyle = '#000';
 	c2.stroke();
 }
 
 function locateVideos() {
+
 	$('#vid1').css({ top: '155px' });
 	$('#vid1').css({ left: '674px' });
 	
@@ -77,8 +78,10 @@ app.controller('PageCtrl', function($scope, $http) {
 
 app.controller('MainCtrl', function($scope, $http) {
 	console.log("Main Controller reporting for duty.");
-
+	
+	$('body').css('background-color', 'white');
+	window.scrollTo(0,0);
+	
 	createPentagon();
 	locateVideos();
-	
 });
