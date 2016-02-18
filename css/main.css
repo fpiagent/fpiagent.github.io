@@ -157,6 +157,9 @@ footer {
 }
 
 h1 {
+	font-family: "Magic Pancho";
+	font-size: 28pt;
+	letter-spacing: 0.5pt;
 	color: white;
 }
 
@@ -184,4 +187,27 @@ h1 {
 
 @keyframes beat{
 	to { transform: scale(1.4); }
+}
+
+@font-face {
+        font-family: "Magic Pancho";
+        src: url(fonts/Vinta.tff);
+}
+
+.intro p {
+	padding-top: 15pt;
+	width: 40%;
+	margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: justify;
+    text-justify: inter-word;
+	font-family: "Magic Pancho";
+	font-size: 16pt;
+	letter-spacing: 0.5pt;
+}
+
+.intro p span.first-letter {
+	font-size: 36pt;
+	line-height: 0%;
 }
