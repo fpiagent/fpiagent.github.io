@@ -125,7 +125,7 @@ footer p {
 	margin-left: auto;
 	text-align: center;
 	padding-top: 50pt;
-	font-family: "Magic Pancho";
+	font-family: MyVinta;
 	font-size: 16pt;
 	letter-spacing: 0.5pt;
 	width: 100%;
@@ -165,7 +165,7 @@ footer p {
 }
 
 h1 {
-	font-family: "Magic Pancho";
+	font-family: MyVinta;
 	font-size: 28pt;
 	letter-spacing: 0.5pt;
 	color: white;
@@ -234,8 +234,8 @@ to {
 }
 
 @font-face {
-	font-family: "Magic Pancho";
-	src: url(fonts/Vinta.tff);
+	font-family: MyVinta;
+	src: url('/fonts/Vinta.ttf');
 }
 
 .intro p {
@@ -246,7 +246,7 @@ to {
 	color: white;
 	text-align: justify;
 	text-justify: inter-word;
-	font-family: "Magic Pancho";
+	font-family: MyVinta;
 	font-size: 16pt;
 	letter-spacing: 0.5pt;
 }
@@ -266,7 +266,7 @@ to {
 	width: 100px;
 	height: 50px;
 	background-color: white;
-	font-family: "Magic Pancho";
+	font-family: MyVinta;
 	font-size: 16pt;
 	text-align: center;
 	cursor: pointer;
@@ -293,7 +293,7 @@ to {
 }
 
 .bio p {
-	font-family: "Magic Pancho";
+	font-family: MyVinta;
 	font-size: 16pt;
 	letter-spacing: 0.5pt;
 	text-align: justify;
@@ -303,7 +303,7 @@ to {
 }
 
 .thanks, .contacto {
-	font-family: "Magic Pancho";
+	font-family: MyVinta;
 	font-size: 16pt;
 	letter-spacing: 0.5pt;
 	color: white;
