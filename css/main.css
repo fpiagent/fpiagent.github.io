@@ -123,6 +123,7 @@ footer p {
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
+	padding-top: 50pt;
 }
 
 /* Responsive Styles */
@@ -155,7 +156,7 @@ footer p {
 
 .flash-box {
 	width: 300px;
-	height: 300px :
+	height: 300px  :
 }
 
 h1 {
@@ -166,49 +167,54 @@ h1 {
 }
 
 #pentagon {
-	min-height: 620px;
+	min-height: 500px;
+	max-height: 100%;
+	max-width: 500px;
 	animation: beat 5s infinite alternate;
 	transform-origin: center;
 	margin-left: auto;
 	margin-right: auto;
 	background-image: url("../images/pentagono.jpg");
 	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	background-position: center;
-	position: relative
+	position: relative text-align : center;
 }
 
 .vid {
 	position: absolute;
+	height: 16%;
+	width: 29%;
+}
+
+.vid img {
+	height: 100%;
+	width: 100%;
 }
 
 #vid1 {
 	top: 0;
-	right: auto;
-	left: auto;
+	left: 36%;
 }
 
 #vid2 {
-	top: 130pt;
-	right: 50pt;
+	top: 34%;
+	left: -10%;
 }
 
 #vid3 {
-	bottom: 0px;
-	right: 100pt;
+	top: 34%;
+	right: -10%;
 }
 
 #vid4 {
-	bottom: 0px;
-	left: 100pt;
+	bottom: -3%;
+	left: 6%;
 }
 
 #vid5 {
-	top: 130pt;
-	left: 50pt;
-}
-
-.vid img {
-	width: 50%;
+	bottom: -3%;
+	right: 6%;
 }
 
 .main-title {
@@ -216,22 +222,24 @@ h1 {
 }
 
 @keyframes beat{
-	to { transform: scale(0.9); }
+to {
+	transform: scale(0.9);
+}
 }
 
 @font-face {
-        font-family: "Magic Pancho";
-        src: url(fonts/Vinta.tff);
+	font-family: "Magic Pancho";
+	src: url(fonts/Vinta.tff);
 }
 
 .intro p {
 	padding-top: 15pt;
 	max-width: 450px;
 	margin-left: auto;
-    margin-right: auto;
-    color: white;
-    text-align: justify;
-    text-justify: inter-word;
+	margin-right: auto;
+	color: white;
+	text-align: justify;
+	text-justify: inter-word;
 	font-family: "Magic Pancho";
 	font-size: 16pt;
 	letter-spacing: 0.5pt;
