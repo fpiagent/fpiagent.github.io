@@ -10,12 +10,20 @@ app.config([ '$routeProvider', function($routeProvider) {
 	$routeProvider
 	// Home
 	.when("/", {
-		templateUrl : "partials/home.html",
+		templateUrl : "partials/introduccion.html",
 		controller : "PageCtrl"
 	})
-	.when("/main", {
-		templateUrl : "partials/main.html",
+	.when("/capitulo1", {
+		templateUrl : "partials/capitulo1.html",
 		controller : "MainCtrl"
+	})
+	.when("/agradecimientos", {
+		templateUrl : "partials/agradecimientos.html",
+		controller : "PageCtrl"
+	})
+	.when("/contacto", {
+		templateUrl : "partials/contacto.html",
+		controller : "PageCtrl"
 	})
 	// else 404
 	.otherwise("/404", {
@@ -28,12 +36,10 @@ app.config([ '$routeProvider', function($routeProvider) {
  * Controls all other Pages
  */
 app.controller('PageCtrl', function($scope, $http) {
-	console.log("Page Controller reporting for duty.");
+	//DO nothing for now, placeholder
 });
 
 app.controller('MainCtrl', function($scope, $http) {
-	console.log("Main Controller reporting for duty.");
-	
 	window.scrollTo(0,0);
 	$('.bio').hide();
 	$('.bio-button').unbind('click');

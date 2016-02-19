@@ -34,6 +34,7 @@ body {
 /* Page Sections */
 .section, .section-colored {
 	/*padding: 50px 0;*/
+	min-height: 200px;
 }
 
 .section-colored {
@@ -124,6 +125,10 @@ footer p {
 	margin-left: auto;
 	text-align: center;
 	padding-top: 50pt;
+	font-family: "Magic Pancho";
+	font-size: 16pt;
+	letter-spacing: 0.5pt;
+	width: 100%;
 }
 
 /* Responsive Styles */
@@ -256,7 +261,7 @@ to {
 	top: -15pt;
 	right: 10%;
 	border-radius: 15px;
-    border: 2px solid #73AD21;
+    border: 2px solid black;
     padding: 15pt;
     width: 100px;
     height: 50px;
@@ -295,4 +300,14 @@ to {
 	margin-left: 30pt;
 	margin-right: 30pt;
 	margin-top: 15pt;
+}
+ 
+.thanks {
+	font-family: "Magic Pancho";
+	font-size: 16pt;
+	letter-spacing: 0.5pt;
+	color: white;
+	max-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
 }
