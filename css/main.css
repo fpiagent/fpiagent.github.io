@@ -125,7 +125,7 @@ footer p {
 	margin-left: auto;
 	text-align: center;
 	padding-top: 50pt;
-	font-family: MyVinta;
+	font-family: "MyVinta";
 	font-size: 16pt;
 	letter-spacing: 0.5pt;
 	width: 100%;
@@ -165,7 +165,7 @@ footer p {
 }
 
 h1 {
-	font-family: MyVinta;
+	font-family: "MyVinta";
 	font-size: 28pt;
 	letter-spacing: 0.5pt;
 	color: white;
@@ -196,6 +196,20 @@ h1 {
 .vid img {
 	height: 100%;
 	width: 100%;
+}
+
+.vid p {
+	font-family: "MyVinta";
+	font-size: 16pt;
+	color: white;
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	height: 40%;
+	width: 40%;
+	background-color: black;
+	box-shadow: rgba(0,0,0,0.2) 0px 2px 3px, inset rgba(0,0,0,0.2) 0px -1px 2px;
+	border: solid #000 1px;
 }
 
 #vid1 {
@@ -234,8 +248,8 @@ to {
 }
 
 @font-face {
-	font-family: MyVinta;
-	src: url('/fonts/Vinta.ttf');
+	font-family: "MyVinta";
+	src: url("/fonts/vinta-webfont.woff");
 }
 
 .intro p {
@@ -246,7 +260,7 @@ to {
 	color: white;
 	text-align: justify;
 	text-justify: inter-word;
-	font-family: MyVinta;
+	font-family: "MyVinta";
 	font-size: 16pt;
 	letter-spacing: 0.5pt;
 }
@@ -254,6 +268,10 @@ to {
 .intro p span.first-letter {
 	font-size: 36pt;
 	line-height: 0%;
+}
+
+.intro p.firma {
+	text-align: right;
 }
 
 .bio-button {
@@ -266,7 +284,7 @@ to {
 	width: 100px;
 	height: 50px;
 	background-color: white;
-	font-family: MyVinta;
+	font-family: "MyVinta";
 	font-size: 16pt;
 	text-align: center;
 	cursor: pointer;
@@ -293,7 +311,7 @@ to {
 }
 
 .bio p {
-	font-family: MyVinta;
+	font-family: "MyVinta";
 	font-size: 16pt;
 	letter-spacing: 0.5pt;
 	text-align: justify;
@@ -303,7 +321,7 @@ to {
 }
 
 .thanks, .contacto {
-	font-family: MyVinta;
+	font-family: "MyVinta";
 	font-size: 16pt;
 	letter-spacing: 0.5pt;
 	color: white;
@@ -325,7 +343,7 @@ to {
 .social a {
 	padding: 16px;
 	background-repeat: no-repeat;
-	pointer: cursor;
+	cursor: pointer;
 	margin: 20px;
 }
 
