@@ -193,6 +193,7 @@ h1 {
 	position: absolute;
 	height: 16%;
 	width: 29%;
+	cursor: pointer;
 }
 
 .vid img {
@@ -333,6 +334,7 @@ to {
 }
 .thanks ul {
 	list-style: none;
+	padding-left: 0;
 }
 
 .thanks li {
