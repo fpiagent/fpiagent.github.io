@@ -120,7 +120,7 @@ body {
 }
 
 /* Footer Styles */
-footer p {
+footer p, footer .contact {
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
@@ -129,6 +129,16 @@ footer p {
 	font-size: 16pt;
 	letter-spacing: 0.5pt;
 	width: 100%;
+}
+
+footer .contact {
+	padding-top: 0;
+	text-align: center;
+	padding-bottom: 20pt;
+}
+
+footer .contact img {
+	height: 20pt;
 }
 
 /* Responsive Styles */
@@ -161,7 +171,7 @@ footer p {
 
 .flash-box {
 	width: 300px;
-	height: 300px       :
+	height: 300px         :
 }
 
 h1 {
@@ -301,8 +311,9 @@ to {
 	min-width: 350px;
 	height: 100%;
 	text-align: center;
-	border-left: 7px dotted #000;
-	box-shadow: inset 0 -3px 0 0 #000, 0 3px 0 0 #000;
+	-webkit-box-shadow: -5px -4px 5px -1px rgba(209,209,209,1);
+	-moz-box-shadow: -5px -4px 5px -1px rgba(209,209,209,1);
+	box-shadow: -5px -4px 5px -1px rgba(209,209,209,1);
 	display: hidden;
 	overflow: auto;
 }
@@ -322,7 +333,7 @@ to {
 	margin-top: 15pt;
 }
 
-.thanks, .contacto {
+.thanks {
 	font-family: "MyVinta";
 	font-size: 16pt;
 	letter-spacing: 0.5pt;
@@ -338,12 +349,8 @@ to {
 }
 
 .thanks li {
-	padding:20pt 0;
-	border-bottom: 1px solid white; 
-}
-
-.contacto {
-	text-align: center;
+	padding: 20pt 0;
+	border-bottom: 1px solid white;
 }
 
 .social {

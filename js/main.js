@@ -18,9 +18,6 @@ app.config([ '$routeProvider', function($routeProvider) {
 	}).when("/agradecimientos", {
 		templateUrl : "partials/agradecimientos.html",
 		controller : "PageCtrl"
-	}).when("/contacto", {
-		templateUrl : "partials/contacto.html",
-		controller : "PageCtrl"
 	})
 	// else 404
 	.otherwise("/404", {
@@ -41,7 +38,9 @@ app.controller('MainCtrl', function($scope, $http) {
 	window.scrollTo(0, 0);
 	$('.bio').hide();
 	$('.bio-button').unbind('click');
-
+	$('.contact').hide();
+	$('.contact-button').unbind('click');
+	
 	$('.bio-button').click(function() {
 		$('.bio').slideToggle(500);
 		$('.bio-button').slideToggle(200, function() {
@@ -53,6 +52,13 @@ app.controller('MainCtrl', function($scope, $http) {
 			$('.bio-button').slideToggle(200);
 		});
 	});
+	
+	$('.contact-button').click(function() {
+		$('.contact').slideToggle(200, function() {
+			window.scrollTo(0,document.body.scrollHeight);
+		});
+	});
+	
 
 });
 
