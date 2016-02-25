@@ -218,7 +218,7 @@ h1 {
 	position: absolute;
 	top: 30%;
 	left: 30%;
-	height: 40%;
+	height: 50%;
 	width: 40%;
 	background-color: black;
 }
@@ -318,9 +318,28 @@ to {
 	overflow: auto;
 }
 
-.bio img {
+.bio #cycler{
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 40pt;
 	max-height: 150px;
+	position: relative;
+	height: 60%;
+	width: 50%;
+	text-align: center;
+}
+
+.bio #cycler img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 100%;
+    z-index: 0;
+}
+
+.bio #cycler img:first-of-type {
+	z-index: 5;
 }
 
 .bio p {
