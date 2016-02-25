@@ -44,11 +44,6 @@ app.controller('MainCtrl', function($scope, $http) {
 	$('.bio-button').click(function() {
 		$('.bio').slideToggle(500);
 		$('.bio-button').slideToggle(200, function() {
-			if ($('.bio-button span').html() === 'Bio') {
-				$('.bio-button span').html('Hide');
-			} else {
-				$('.bio-button span').html('Bio');
-			}
 			$('.bio-button').slideToggle(200);
 		});
 	});
@@ -59,6 +54,53 @@ app.controller('MainCtrl', function($scope, $http) {
 		});
 	});
 	
-
+	startVideoEvents();
 });
+
+function startVideoEvents() {
+	$('#vid1').click(function() {
+		loadPlayer('jGHcz_TOvrI');
+	});
+	$('#vid2').click(function() {
+		loadPlayer('oWkA_XJa8D8');
+	});
+	$('#vid3').click(function() {
+		loadPlayer('q-M6coiGBsk');
+	});
+	$('#vid4').click(function() {
+		loadPlayer('BeWUT-8_phU');
+	});
+	$('#vid5').click(function() {
+		loadPlayer('4FdlamhTVlo');
+	});
+	$('.close-player').click(function() {
+		$('.close-player').hide();
+		$('.player').animate({
+		    height: '0',
+		    width: '0',
+		    top: '50%',
+		    left: '50%'
+		}, {
+		    duration: 2000  // 2 seconds
+		}, function() {
+			$('.player').attr('src', '');
+			$('.player').hide();
+		});
+		
+	});
+}
+
+function loadPlayer(path) {
+	$('.player').attr('src', 'https://www.youtube.com/embed/' + path);
+	$('.player').show();
+	$('.player').animate({
+	    height: '100%',
+	    width: '100%',
+	    top: '0',
+	    left: '0'
+	}, {
+	    duration: 2000  // 2 seconds
+	});
+	$('.close-player').show();
+}
 
