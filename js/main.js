@@ -82,17 +82,18 @@ function startVideoEvents() {
 		    top: '50%',
 		    left: '50%'
 		}, {
-		    duration: 2000  // 2 seconds
-		}, function() {
-			$('.player').attr('src', '');
-			$('.player').hide();
+		    duration: 2000,
+		    complete: function() {
+				$('.player').attr('src', 'about:blank');
+				$('.player').hide();
+			}
 		});
 		
 	});
 }
 
 function loadPlayer(path) {
-	$('.player').attr('src', 'https://www.youtube.com/embed/' + path);
+	$('.player').attr('src', 'https://www.youtube.com/embed/' + path + '?autoplay=1');
 	$('.player').show();
 	$('.player').animate({
 	    height: '100%',
@@ -114,4 +115,3 @@ function cycleImages(){
         $next.css('z-index',3).addClass('active');//make the next image the top one
     });
   }
-

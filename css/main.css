@@ -324,7 +324,7 @@ to {
 	margin-top: 40pt;
 	max-height: 150px;
 	position: relative;
-	height: 60%;
+	height: 50%;
 	width: 50%;
 	text-align: center;
 }
@@ -335,6 +335,7 @@ to {
     left: 0;
     background-color: white;
     height: 100%;
+    width: 100%;
     z-index: 0;
 }
 
