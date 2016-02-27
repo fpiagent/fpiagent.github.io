@@ -115,6 +115,9 @@ function onYouTubeIframeAPIReady() {
 
 function loadPlayer(path) {
 	player.loadVideoById(path);
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		 player.stopVideo();
+	}
 	$('.player').show();
 	$('.player').animate({
 		height : '100%',
