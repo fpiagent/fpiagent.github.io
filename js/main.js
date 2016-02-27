@@ -26,7 +26,6 @@ app.config([ '$routeProvider', function($routeProvider) {
 	});
 } ]);
 
-
 /**
  * Controls all other Pages
  */
@@ -40,25 +39,60 @@ app.controller('MainCtrl', function($scope, $http) {
 	$('.bio-button').unbind('click');
 	$('.contact').hide();
 	$('.contact-button').unbind('click');
-	
+
 	$('.bio-button').click(function() {
 		$('.bio').slideToggle(500);
 		$('.bio-button').slideToggle(200, function() {
 			$('.bio-button').slideToggle(200);
 		});
 	});
-	
+
 	$('.contact-button').click(function() {
 		$('.contact').slideToggle(200, function() {
-			window.scrollTo(0,document.body.scrollHeight);
+			window.scrollTo(0, document.body.scrollHeight);
 		});
 	});
-	
-	startVideoEvents();
+
 	setInterval(cycleImages, 5000);
+	loadYTScript();
 });
 
-function startVideoEvents() {
+function cycleImages() {
+	var $active = $('#cycler .active');
+	var $next = ($active.next().length > 0) ? $active.next()
+			: $('#cycler img:first');
+	$next.css('z-index', 2);// move the next image up the pile
+	$active.fadeOut(1500, function() {// fade out the top image
+		$active.css('z-index', 1).show().removeClass('active');// reset the
+		// z-index and
+		// unhide the
+		// image
+		$next.css('z-index', 3).addClass('active');// make the next image the
+		// top one
+	});
+}
+
+function loadYTScript() {
+	var tag = document.createElement('script');
+
+	tag.src = "https://www.youtube.com/iframe_api";
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+}
+
+var player;
+/**
+ * This is the automatic Callback from YouTube API
+ */
+function onYouTubeIframeAPIReady() {
+	player = new YT.Player('player', {
+		height : '390',
+		width : '640',
+		videoId : '',
+		events : {
+			'onStateChange' : onPlayerStateChange
+		}
+	});
 	$('#vid1').click(function() {
 		loadPlayer('jGHcz_TOvrI');
 	});
@@ -75,43 +109,43 @@ function startVideoEvents() {
 		loadPlayer('4FdlamhTVlo');
 	});
 	$('.close-player').click(function() {
-		$('.close-player').hide();
-		$('.player').animate({
-		    height: '0',
-		    width: '0',
-		    top: '50%',
-		    left: '50%'
-		}, {
-		    duration: 2000,
-		    complete: function() {
-				$('.player').attr('src', 'about:blank');
-				$('.player').hide();
-			}
-		});
-		
+		closeVideo();
 	});
 }
 
 function loadPlayer(path) {
-	$('.player').attr('src', 'https://www.youtube.com/embed/' + path + '?autoplay=1');
+	player.loadVideoById(path);
 	$('.player').show();
 	$('.player').animate({
-	    height: '100%',
-	    width: '100%',
-	    top: '0',
-	    left: '0'
+		height : '100%',
+		width : '100%',
+		top : '0',
+		left : '0'
 	}, {
-	    duration: 2000  // 2 seconds
+		duration : 2000
+	// 2 seconds
 	});
 	$('.close-player').show();
 }
 
-function cycleImages(){
-    var $active = $('#cycler .active');
-    var $next = ($active.next().length > 0) ? $active.next() : $('#cycler img:first');
-    $next.css('z-index',2);//move the next image up the pile
-    $active.fadeOut(1500,function(){//fade out the top image
-	      $active.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
-        $next.css('z-index',3).addClass('active');//make the next image the top one
-    });
-  }
+function closeVideo() {
+	$('.close-player').hide();
+	$('.player').animate({
+		height : '0',
+		width : '0',
+		top : '50%',
+		left : '50%'
+	}, {
+		duration : 2000,
+		complete : function() {
+			player.stopVideo();
+			$('.player').hide();
+		}
+	});
+}
+
+function onPlayerStateChange(event) {
+	if (event.data === 0) {
+		closeVideo();
+	}
+}
