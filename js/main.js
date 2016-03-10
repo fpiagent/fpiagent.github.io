@@ -1,7 +1,7 @@
 /**
  * Main AngularJS Web Application
  */
-var app = angular.module('tutorialWebApp', [ 'ngRoute' ]);
+var app = angular.module('tutorialWebApp', [ 'ngRoute','angulartics', 'angulartics.google.analytics']);
 
 /**
  * Configure the Routes
@@ -35,7 +35,6 @@ app.controller('PageCtrl', function($scope, $http) {
 
 app.controller('MainCtrl', function($scope, $http) {
 	window.scrollTo(0, 0);
-	$('.bio').hide();
 	$('.bio-button').unbind('click');
 	$('.contact').hide();
 	$('.contact-button').unbind('click');
@@ -44,6 +43,13 @@ app.controller('MainCtrl', function($scope, $http) {
 		$('.bio').slideToggle(500);
 		$('.bio-button').slideToggle(200, function() {
 			$('.bio-button').slideToggle(200);
+		});
+	});
+	
+	$('.decalogo-button').click(function() {
+		$('.decalogo').slideToggle(500);
+		$('.decalogo-button').slideToggle(200, function() {
+			$('.decalogo-button').slideToggle(200);
 		});
 	});
 
