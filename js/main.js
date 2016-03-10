@@ -44,6 +44,9 @@ app.controller('MainCtrl', function($scope, $http) {
 		$('.bio-button').slideToggle(200, function() {
 			$('.bio-button').slideToggle(200);
 		});
+		if($('.decalogo').is(":visible")) {
+			$('.decalogo').slideToggle(500);
+		}
 	});
 	
 	$('.decalogo-button').click(function() {
@@ -51,6 +54,9 @@ app.controller('MainCtrl', function($scope, $http) {
 		$('.decalogo-button').slideToggle(200, function() {
 			$('.decalogo-button').slideToggle(200);
 		});
+		if($('.bio').is(":visible")) {
+			$('.bio').slideToggle(500);
+		}
 	});
 
 	$('.contact-button').click(function() {

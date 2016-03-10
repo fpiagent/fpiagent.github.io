@@ -312,9 +312,9 @@ to {
 	min-width: 350px;
 	height: 100%;
 	text-align: center;
-	-webkit-box-shadow: -5px -4px 5px -1px rgba(209,209,209,1);
-	-moz-box-shadow: -5px -4px 5px -1px rgba(209,209,209,1);
-	box-shadow: -5px -4px 5px -1px rgba(209,209,209,1);
+	-webkit-box-shadow: -5px 0 5px -1px rgba(209,209,209,1);
+	-moz-box-shadow: -5px 0 5px -1px rgba(209,209,209,1);
+	box-shadow: -5px 0 5px -1px rgba(209,209,209,1);
 	overflow: auto;
 }
 
@@ -359,9 +359,9 @@ to {
 	left: 0;
 	margin-left: 0;
 	margin-top: 0;
-	-webkit-box-shadow: 5px -4px 5px -1px rgba(209,209,209,1);
-	-moz-box-shadow: 5px -4px 5px -1px rgba(209,209,209,1);
-	box-shadow: 5px -4px 5px -1px rgba(209,209,209,1);
+	-webkit-box-shadow: 5px 0 5px -1px rgba(209,209,209,1);
+	-moz-box-shadow: 5px 0 5px -1px rgba(209,209,209,1);
+	box-shadow: 5px 0 5px -1px rgba(209,209,209,1);
 }
 
 .decalogo ul {
