@@ -18,6 +18,9 @@ app.config([ '$routeProvider', function($routeProvider) {
 	}).when("/agradecimientos", {
 		templateUrl : "partials/agradecimientos.html",
 		controller : "PageCtrl"
+	}).when("/descargas", {
+		templateUrl : "partials/descargas.html",
+		controller : "PageCtrl"
 	})
 	// else 404
 	.otherwise("/404", {

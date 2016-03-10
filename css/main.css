@@ -364,14 +364,22 @@ to {
 	box-shadow: 5px 0 5px -1px rgba(209,209,209,1);
 }
 
+.decalogo h2 {
+	margin-top: 30pt;	
+	font-family: "MyVinta";
+	font-weight: bold;
+	font-size: 18pt;
+	letter-spacing: 0.5pt;
+}
+
 .decalogo ul {
 	font-family: "MyVinta";
 	font-size: 16pt;
 	letter-spacing: 0.5pt;
 	text-align: justify;
 	padding-right: 20pt;
-	margin-top: 30pt;
-	list-style-type:decimal-leading-zero;
+	margin-top: 15pt;
+	list-style-type:decimal;
 }
 
 .decalogo ul li {
