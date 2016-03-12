@@ -170,7 +170,7 @@ footer .contact img {
 
 .flash-box {
 	width: 300px;
-	height: 300px          :
+	height: 300px           :
 }
 
 h1 {
@@ -364,7 +364,7 @@ to {
 }
 
 .decalogo h2 {
-	margin-top: 30pt;	
+	margin-top: 30pt;
 	font-family: "MyVinta";
 	font-weight: bold;
 	font-size: 18pt;
@@ -378,7 +378,7 @@ to {
 	text-align: justify;
 	padding-right: 20pt;
 	margin-top: 15pt;
-	list-style-type:decimal;
+	list-style-type: decimal;
 }
 
 .decalogo ul li {
@@ -462,11 +462,19 @@ to {
 
 .lang {
 	width: 100%;
-	text-align: right;
+	text-align: center;
 	padding-right: 10pt;
-	padding-top: 30pt;
+	padding-top: 5pt;
 }
+
 .lang img {
 	height: 15pt;
 	cursor: pointer;
+}
+
+@media screen and (max-width: 460px) {
+	.lang {
+		text-align: center;
+		padding-left: 50pt;
+	}
 }
