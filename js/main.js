@@ -1,7 +1,8 @@
 /**
  * Main AngularJS Web Application
  */
-var app = angular.module('tutorialWebApp', [ 'ngRoute','angulartics', 'angulartics.google.analytics']);
+var app = angular.module('tutorialWebApp', [ 'ngRoute', 'angulartics',
+		'angulartics.google.analytics', 'pascalprecht.translate' ]);
 
 /**
  * Configure the Routes
@@ -32,8 +33,10 @@ app.config([ '$routeProvider', function($routeProvider) {
 /**
  * Controls all other Pages
  */
-app.controller('PageCtrl', function($scope, $http) {
-	// DO nothing for now, placeholder
+app.controller('PageCtrl', function($scope, $http, $translate) {
+	$scope.changeLanguage = function(langKey) {
+		$translate.use(langKey);
+	};
 });
 
 app.controller('MainCtrl', function($scope, $http) {
@@ -47,17 +50,17 @@ app.controller('MainCtrl', function($scope, $http) {
 		$('.bio-button').slideToggle(200, function() {
 			$('.bio-button').slideToggle(200);
 		});
-		if($('.decalogo').is(":visible")) {
+		if ($('.decalogo').is(":visible")) {
 			$('.decalogo').slideToggle(500);
 		}
 	});
-	
+
 	$('.decalogo-button').click(function() {
 		$('.decalogo').slideToggle(500);
 		$('.decalogo-button').slideToggle(200, function() {
 			$('.decalogo-button').slideToggle(200);
 		});
-		if($('.bio').is(":visible")) {
+		if ($('.bio').is(":visible")) {
 			$('.bio').slideToggle(500);
 		}
 	});
@@ -130,8 +133,9 @@ function onYouTubeIframeAPIReady() {
 
 function loadPlayer(path) {
 	player.loadVideoById(path);
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-		 player.stopVideo();
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
+			.test(navigator.userAgent)) {
+		player.stopVideo();
 	}
 	$('.player').show();
 	$('.player').animate({

@@ -13,7 +13,6 @@ html, body {
 }
 
 body {
-	padding-top: 50px;
 	padding-bottom: 20px;
 	background-color: black;
 }
@@ -459,4 +458,13 @@ to {
 	left: 20pt;
 	height: 50px;
 	pointer: cursor;
+}
+
+.lang {
+	width: 100%;
+	text-align: center;
+}
+.lang img {
+	height: 12pt;
+	cursor: pointer;
 }
