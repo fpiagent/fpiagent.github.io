@@ -462,9 +462,11 @@ to {
 
 .lang {
 	width: 100%;
-	text-align: center;
+	text-align: right;
+	padding-right: 10pt;
+	padding-top: 30pt;
 }
 .lang img {
-	height: 12pt;
+	height: 15pt;
 	cursor: pointer;
 }
