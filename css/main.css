@@ -254,6 +254,7 @@ h1 {
 
 .main-title {
 	padding-bottom: 50px;
+	padding-top: 30pt;
 }
 
 @keyframes beat{
@@ -468,7 +469,6 @@ to {
 .lang {
 	width: 100%;
 	text-align: center;
-	padding-right: 10pt;
 	padding-top: 5pt;
 }
 
@@ -486,10 +486,3 @@ to {
 	}
 }
 
-
-@media screen and (max-width: 460px) {
-	.lang {
-		text-align: center;
-		padding-left: 50pt;
-	}
-}
