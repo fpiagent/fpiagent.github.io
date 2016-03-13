@@ -105,7 +105,7 @@ app.config(function($translateProvider) {
 		decalogo_5 : 'Listen to your fellow, and you will listen to yourself.',
 		decalogo_6 : 'Listen to yourself, and you will listen to the universe.',
 		decalogo_7 : 'Listen to the universe and act accordingly.',
-		decalogo_8 : 'Do not judge if you don\'t wont to judge yourself.',
+		decalogo_8 : 'Do not judge if you don\'t want to be judged yourself.',
 		decalogo_9 : 'Everything I possess, ends up possessing me.',
 		decalogo_10 : 'If you are not having fun, you are not doing it right.',
 		
