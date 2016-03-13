@@ -70,6 +70,9 @@ app.config(function($translateProvider) {
 //		CHAPTER 1 END
 		
 		back : 'Volver',
+		
+		descargas : 'Descargas',
+		descarga_link : 'Descargar',
 	}).translations('en', {
 //		INTRO BEGIN
 		intro_title : 'Introduction',
@@ -138,6 +141,10 @@ app.config(function($translateProvider) {
 //		CHAPTER 1 END
 		
 		back : 'Back',
+		
+//		DOWNLOADS
+		descargas : 'Dowloads',
+		descarga_link : 'Download',
 	});
 	// $translateProvider.determinePreferredLanguage();
 	$translateProvider.preferredLanguage('es');

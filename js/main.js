@@ -39,11 +39,17 @@ app.controller('PageCtrl', function($scope, $http, $translate) {
 	};
 });
 
+/**
+ * Main controller used for chapters
+ */
 app.controller('MainCtrl', function($scope, $http) {
 	window.scrollTo(0, 0);
 	$('.bio-button').unbind('click');
 	$('.contact').hide();
+	$('.downloads').hide();
+	
 	$('.contact-button').unbind('click');
+	$('.download-button').unbind('click');
 
 	$('.bio-button').click(function() {
 		$('.bio').slideToggle(500);
@@ -65,31 +71,50 @@ app.controller('MainCtrl', function($scope, $http) {
 		}
 	});
 
+	//CONTACT
 	$('.contact-button').click(function() {
 		$('.contact').slideToggle(200, function() {
-			window.scrollTo(0, document.body.scrollHeight);
+			$('html, body').animate({
+		        scrollTop:document.body.scrollHeight
+		    }, 1000);
+			if ($('.downloads').is(":visible")) {
+				$('.downloads').slideToggle(200);
+			}
 		});
 	});
 
+	//DOWNLOAD
+	$('.download-button').click(function() {
+		$('.downloads').slideToggle(200, function() {
+			$('html, body').animate({
+		        scrollTop:document.body.scrollHeight
+		    }, 1000);
+			if ($('.contact').is(":visible")) {
+				$('.contact').slideToggle(200);
+			}
+		});
+	});
 	setInterval(cycleImages, 5000);
 	loadYTScript();
 });
 
+/**
+ * Profile pic cycler.
+ */
 function cycleImages() {
 	var $active = $('#cycler .active');
 	var $next = ($active.next().length > 0) ? $active.next()
 			: $('#cycler img:first');
-	$next.css('z-index', 2);// move the next image up the pile
-	$active.fadeOut(1500, function() {// fade out the top image
-		$active.css('z-index', 1).show().removeClass('active');// reset the
-		// z-index and
-		// unhide the
-		// image
-		$next.css('z-index', 3).addClass('active');// make the next image the
-		// top one
+	$next.css('z-index', 2);
+	$active.fadeOut(1500, function() {
+		$active.css('z-index', 1).show().removeClass('active');
+		$next.css('z-index', 3).addClass('active');
 	});
 }
 
+/**
+ * YouTube API starter
+ */
 function loadYTScript() {
 	var tag = document.createElement('script');
 

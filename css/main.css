@@ -119,7 +119,7 @@ body {
 }
 
 /* Footer Styles */
-footer p, footer .contact {
+footer p, footer .contact, footer .downloads {
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
@@ -140,13 +140,18 @@ footer .contact img {
 	height: 20pt;
 }
 
-/* Responsive Styles */
-@media (max-width: 767px) {
+footer .downloads {
+	color: white;
+	text-align: center;
+	padding-top: 0;
+}
 
-	.carousel {
-		height: 70%;
-		/* increases the carousel height so it looks good on phones */
-	}
+footer .downloads ul {
+	list-style-type: none;
+}
+
+footer .downloads li {
+	margin-top: 15pt;
 }
 
 .flash {
@@ -471,6 +476,16 @@ to {
 	height: 15pt;
 	cursor: pointer;
 }
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+
+	.carousel {
+		height: 70%;
+		/* increases the carousel height so it looks good on phones */
+	}
+}
+
 
 @media screen and (max-width: 460px) {
 	.lang {
