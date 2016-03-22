@@ -2,6 +2,7 @@
  * INTERNATIONALIZATION
  */
 app.config(function($translateProvider) {
+	$translateProvider.useSanitizeValueStrategy('escaped');
 	$translateProvider.translations('es', {
 
 		intro_title : 'Introducción',

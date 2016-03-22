@@ -142,6 +142,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function loadPlayer(path) {
+	window.scrollTo(0, 0);
 	player.loadVideoById(path);
 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
 			.test(navigator.userAgent)) {
