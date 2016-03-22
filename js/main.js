@@ -34,6 +34,7 @@ app.config([ '$routeProvider', function($routeProvider) {
  * Controls all other Pages
  */
 app.controller('PageCtrl', function($scope, $http, $translate) {
+	window.scrollTo(0, 0);
 	$scope.changeLanguage = function(langKey) {
 		$translate.use(langKey);
 	};
@@ -46,10 +47,8 @@ app.controller('MainCtrl', function($scope, $http) {
 	window.scrollTo(0, 0);
 	$('.bio-button').unbind('click');
 	$('.contact').hide();
-	$('.downloads').hide();
 	
 	$('.contact-button').unbind('click');
-	$('.download-button').unbind('click');
 
 	$('.bio-button').click(function() {
 		$('.bio').slideToggle(500);
@@ -77,23 +76,9 @@ app.controller('MainCtrl', function($scope, $http) {
 			$('html, body').animate({
 		        scrollTop:document.body.scrollHeight
 		    }, 1000);
-			if ($('.downloads').is(":visible")) {
-				$('.downloads').slideToggle(200);
-			}
 		});
 	});
 
-	//DOWNLOAD
-	$('.download-button').click(function() {
-		$('.downloads').slideToggle(200, function() {
-			$('html, body').animate({
-		        scrollTop:document.body.scrollHeight
-		    }, 1000);
-			if ($('.contact').is(":visible")) {
-				$('.contact').slideToggle(200);
-			}
-		});
-	});
 	setInterval(cycleImages, 5000);
 	loadYTScript();
 });

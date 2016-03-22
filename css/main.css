@@ -117,9 +117,12 @@ body {
 	font-size: 35%;
 	font-style: italic;
 }
+footer {
+	padding-bottom: 10pt;
+}
 
 /* Footer Styles */
-footer p, footer .contact, footer .downloads {
+footer p, footer .contact, .downloads {
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
@@ -140,17 +143,18 @@ footer .contact img {
 	height: 20pt;
 }
 
-footer .downloads {
+.downloads {
 	color: white;
 	text-align: center;
 	padding-top: 0;
 }
 
-footer .downloads ul {
+.downloads ul {
 	list-style-type: none;
+	padding-left: 0;
 }
 
-footer .downloads li {
+.downloads li {
 	margin-top: 15pt;
 }
 
