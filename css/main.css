@@ -119,6 +119,7 @@ body {
 }
 footer {
 	padding-bottom: 10pt;
+	padding-top: 50pt;
 }
 
 /* Footer Styles */
@@ -126,7 +127,6 @@ footer p, footer .contact, .downloads {
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
-	padding-top: 50pt;
 	font-family: "MyVinta";
 	font-size: 16pt;
 	letter-spacing: 0.5pt;
@@ -489,4 +489,3 @@ to {
 		/* increases the carousel height so it looks good on phones */
 	}
 }
-
