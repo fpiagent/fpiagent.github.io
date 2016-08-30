@@ -63,11 +63,13 @@
 	<span>{{ 'bio_title' | translate }}</span>
 </div>
 
+<ng-include src='"templates/morevideos.html"'></ng-include>
+<div class="more-vids-button">
+	<span>{{ 'more_videos_title' | translate }}</span>
+</div>
+
 <footer>
 	<div>
-		<p>
-			<a href="https://www.youtube.com/watch?v=huqOtcQ8--A" target="_blank">{{ 'more_video_link' | translate }}</a>
-		</p>
 		<p>
 			<a href="/#/agradecimientos">{{ 'thanks' | translate }}</a> | <a class="contact-button" href="#" onclick="return false;">{{ 'contact' | translate }}</a> | <a class="download-button" href="/#/descargas">{{ 'descargas' | translate }}</a>
 		</p>

@@ -49,7 +49,8 @@ app.config(function($translateProvider) {
 		bio_6 : 'De espíritu inquieto y lúdico, está desarrollando este proyecto, un Libro-Web vivo con intención de generar un impacto a nivel social a través de las redes sociales.',
 		bio_7 : 'La escucha que habla es tanto un libro como una técnica de escucha, que el autor, bajo el alias de el aprendiz de la escucha, va descubriendo a medida que hace la obra.',
 
-		more_video_link : 'Ver nuevo video',
+		more_videos_title : 'Charlas...',
+		more_video_link: 'Charla 31/07/2016',
 
 		thanks : 'Agradecimientos',
 
@@ -122,7 +123,8 @@ app.config(function($translateProvider) {
 		bio_6 : 'Of restless and playful spirit, he is developing this project, a Book-Web alive with the intention of generation a social impact through the use of social networks.',
 		bio_7 : 'La escucha que habla is so much a book as it is a listening technique, which the author, under the alias of aprendiz de la escucha, keeps discovering as he creates the work.',
 
-		more_video_link : 'Watch new video',
+		more_videos_title : 'Talks...',
+		more_video_link: 'Talk 07/31/2016',
 
 		thanks : 'Thanks',
 

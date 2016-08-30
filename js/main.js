@@ -47,7 +47,7 @@ app.controller('MainCtrl', function($scope, $http) {
 	window.scrollTo(0, 0);
 	$('.bio-button').unbind('click');
 	$('.contact').hide();
-	
+
 	$('.contact-button').unbind('click');
 
 	$('.bio-button').click(function() {
@@ -55,15 +55,25 @@ app.controller('MainCtrl', function($scope, $http) {
 		$('.bio-button').slideToggle(200, function() {
 			$('.bio-button').slideToggle(200);
 		});
-		if ($('.decalogo').is(":visible")) {
-			$('.decalogo').slideToggle(500);
+		if ($('.more-vids').is(":visible")) {
+			$('.more-vids').slideToggle(500);
 		}
 	});
 
-	$('.decalogo-button').click(function() {
-		$('.decalogo').slideToggle(500);
-		$('.decalogo-button').slideToggle(200, function() {
-			$('.decalogo-button').slideToggle(200);
+	// $('.decalogo-button').click(function() {
+	// 	$('.decalogo').slideToggle(500);
+	// 	$('.decalogo-button').slideToggle(200, function() {
+	// 		$('.decalogo-button').slideToggle(200);
+	// 	});
+	// 	if ($('.bio').is(":visible")) {
+	// 		$('.bio').slideToggle(500);
+	// 	}
+	// });
+
+	$('.more-vids-button').click(function() {
+		$('.more-vids').slideToggle(500);
+		$('.more-vids-button').slideToggle(200, function() {
+			$('.more-vids-button').slideToggle(200);
 		});
 		if ($('.bio').is(":visible")) {
 			$('.bio').slideToggle(500);

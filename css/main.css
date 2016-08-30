@@ -294,7 +294,7 @@ to {
 	text-align: right;
 }
 
-.bio-button, .decalogo-button {
+.bio-button, .decalogo-button, .more-vids-button {
 	position: fixed;
 	top: -15pt;
 	right: 10%;
@@ -310,7 +310,7 @@ to {
 	cursor: pointer;
 }
 
-.bio, .decalogo {
+.bio, .decalogo, .more-vids {
 	display: none;
 	position: fixed;
 	float: right;
@@ -363,7 +363,7 @@ to {
 	text-indent: 40pt;
 }
 
-.decalogo {
+.decalogo, .more-vids {
 	float: left;
 	left: 0;
 	margin-left: 0;
@@ -373,7 +373,7 @@ to {
 	box-shadow: 5px 0 5px -1px rgba(209,209,209,1);
 }
 
-.decalogo h2 {
+.decalogo h2, .more-vids h2 {
 	margin-top: 30pt;
 	font-family: "MyVinta";
 	font-weight: bold;
@@ -381,21 +381,21 @@ to {
 	letter-spacing: 0.5pt;
 }
 
-.decalogo ul {
+.decalogo ul, .more-vids ul {
 	font-family: "MyVinta";
 	font-size: 16pt;
 	letter-spacing: 0.5pt;
 	text-align: justify;
 	padding-right: 20pt;
-	margin-top: 15pt;
+	margin-top: 30pt;
 	list-style-type: decimal;
 }
 
-.decalogo ul li {
+.decalogo ul li, .more-vids ul li {
 	margin-top: 10pt;
 }
 
-.decalogo-button {
+.decalogo-button, .more-vids-button {
 	left: 10%;
 	padding: 14pt 6pt;
 	width: 150px;
